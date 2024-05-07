@@ -1,0 +1,226 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --wenge_brown: #5F564D;
+    --dark_charcoal: #312E2C;
+    --dark_rassberry: #7A284E;
+    --brandy_red: #854632;
+    --eggshell: #F3E5D7;
+    --white_coffee: #E3DDD7;
+    --snow: #FFF7FB;
+    --white: #FFFFFF;
+}
+
+body {
+    padding: 123px 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    background-color: var(--eggshell);
+}
+
+.recipe {
+    width: 100%;
+    height: 100%;
+    max-width: 736px;
+    /* height: 1708px; */
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.recipe .image {
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/image-omelette.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+.recipe .content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.content section.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content .headings h1 {
+    color: var(--dark_charcoal);
+    font-size: 40px;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+p {
+    color: var(--dark_rassberry);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.content .preparation {
+    border-radius: 12px;
+    padding: 28px;
+    background-color: var(--snow);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--dark_rassberry);
+}
+
+.content .preparation h3 {
+    font-weight: 600px;
+    font-size: 20px;
+    /* height: 20px; */
+}
+
+ul.list {
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: none;
+}
+
+.list li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    background-position: 0 center ;
+    color: var(--dark_rassberry);
+    line-height: 150%;
+}
+
+ul.list .disc {
+    background-image: url('../images/list_style.svg');
+}
+
+ol.list {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: decimal;
+}
+
+ol.list .number {
+    padding-left: 16px;
+}
+ol.list .number::marker {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.section_title {
+    color: var(--brandy_red);
+    font-family: "Young Serif", serif;
+    line-height: 100%;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--white_coffee);
+}
+
+table tbody tr {
+    padding: 12px 0 12px 32px;
+    border-top: 1px solid var(--white_coffee);
+    display: flex;
+    justify-content: space-between;
+}
+
+table tbody tr:nth-child(1) {
+    padding-top: 0;
+    padding-bottom: 12px;
+    border-top: 0;
+}
+
+table tbody tr:nth-child(4) {
+    padding-bottom: 0px;
+}
+
+table tbody tr td {
+    width: 100%;
+    max-width: 288px;
+    color: var(--dark_rassberry);
+}
+
+table tbody tr td.diff_color {
+    color: var(--brandy_red);
+    font-weight: 700;
+}
+
+@media(max-width: 400px) {
+    body {
+        padding: 0;
+    }
+    
+    .recipe {
+        max-width: 400px;
+        border-radius: 0px;
+        padding: 0px;
+    }
+    
+    .recipe .image {
+        height: 171px;
+        background-image: url('../images/image-omelette.jpeg');
+        border-radius: 0px;
+    }
+    
+    .recipe .content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 32px 40px;
+    }
+    .content .headings h1 {
+        font-size: 36px;
+    }
+
+    p{
+        color: var(--wenge_brown);
+    }
+
+    .list li {
+        color: var(--wenge_brown);
+    }
+
+    .content .preparation {
+        padding: 24px;
+    }
+
+    table tbody tr {
+        justify-content: start;
+        gap: 16px;
+    }
+
+    table tbody tr td {
+        max-width: 115px;
+        color: var(--wenge_brown);
+    }
+}
